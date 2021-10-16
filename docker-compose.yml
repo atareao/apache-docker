@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  apache:
+    build: .
+    image: atareao/apache
+    hostname: alpine-apache-php.local
+    container_name: apache
+    restart: unless-stopped
+    ports:
+      - 8083:80
+    volumes:
+      - ./html/app:/htdocs
+    env_file:
+      - apache.env
+    #network_mode: host
