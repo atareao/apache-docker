@@ -31,6 +31,7 @@ RUN apk add --update --no-cache \
     php8-session \
     php8-tokenizer \
     php8-intl \
+    php8-xmlwriter \
     php8-xml && \
     rm -rf /var/cache/apk && \
     addgroup -g 1000 -S dockeruser && \
